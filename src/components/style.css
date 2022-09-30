@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Antonio&family=League+Spartan&display=swap");
+
+:root {
+  --Mercury: #419ebb;
+  --Jupiter: #6d2ed5;
+  --Mars: #d14c32;
+  --Neptune: #2d68f0;
+  --Saturn: #cd5120;
+  --Uranus: #1ec1a2;
+  --Venus: #eda249;
+  --BodyBg: #070724;
+  --Inactive-Button-bg: #ffffff33;
+  /* , Header-bg */
+  --Inactive-Button-bg: #d8d8d833;
+  /* hover */
+}
+* {
+  background-color: black;
+  color: white;
+  font-family: "League Spartan";
+  text-transform: uppercase;
+  background-image: url("../background-stars.svg");
+}
+.img {
+  width: 25%;
+}
+/* body {
+  font-family: "Antonio", sans-serif;
+} */
+.nav-planets {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-planets:hover {
+  text-decoration: underline;
+  color: var(--Neptune);
+}
+button:hover {
+  background-color: lightskyblue;
+  color: white;
+}
