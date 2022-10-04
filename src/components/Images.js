@@ -3,7 +3,7 @@ import { PlanetPage } from "./PlanetPage";
 export const Images = ({ planet, view }) => {
   if (view === "overview") {
     return (
-      <div>
+      <div className="img-container">
         <img
           src={`/assets/planet-${planet.name}.svg`}
           alt={`${planet.name}`}
@@ -15,7 +15,7 @@ export const Images = ({ planet, view }) => {
 
   if (view === "structure") {
     return (
-      <div>
+      <div className="img-container">
         <img
           src={`/assets/planet-${planet.name}-internal.svg`}
           alt={`${planet.name}`}
@@ -26,7 +26,7 @@ export const Images = ({ planet, view }) => {
   }
   if (view === "geology") {
     return (
-      <div>
+      <div className="img-container">
         <img
           src={`/assets/planet-${planet.name}.svg`}
           alt={`${planet.name}`}
@@ -38,6 +38,9 @@ export const Images = ({ planet, view }) => {
           alt={`-`}
         />
       </div>
+      //position relative + max width - 100% overview img
+      // surface position absolute
+      // addd percentage to surface
     );
   }
 };

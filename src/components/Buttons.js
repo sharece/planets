@@ -9,10 +9,23 @@ export const Buttons = ({ setView }) => {
   }, [status]);
 
   return (
-    <div className="buttons">
-      <button onClick={() => setView("overview")}>Overview</button>
-      <button onClick={() => setView("structure")}>Internal Structure</button>
-      <button onClick={() => setView("geology")}>Surface Geology</button>
+    <div className="button-container">
+      {/* <div className="mobile-buttons">
+        <a onClick={() => setView("overview")}>Overview</a>
+        <a onClick={() => setView("structure")}>Internal Structure</a>
+        <a onClick={() => setView("geology")}>Surface Geology</a>
+      </div> */}
+      <div className="buttons">
+        <button onClick={() => setView("overview")}>
+          <span>01</span>Overview
+        </button>
+        <button onClick={() => setView("structure")}>
+          <span>02</span>Internal Structure
+        </button>
+        <button onClick={() => setView("geology")}>
+          <span>03</span>Surface Geology
+        </button>
+      </div>
     </div>
   );
 };

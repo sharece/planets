@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
-import { useParams, Outlet } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { Buttons } from "./Buttons";
 import { PlanetNav } from "./PlanetNav";
 import { Stats } from "./Stats";
 import { planetInfo } from "../planetInfo";
 import { Images } from "./Images";
 import { InfoPlanet } from "./InfoPlanet";
+import { MobileButtons } from "./MobileButtons";
 
 export const PlanetPage = () => {
   const { planetName } = useParams();
@@ -31,13 +32,15 @@ export const PlanetPage = () => {
 
   return !planet ? null : (
     <>
-      {" "}
-      <div>
+      <div className="planet-page-container">
         <PlanetNav />
+        <MobileButtons setView={setView} />
         <Images view={view} planet={planet} />
-        <Buttons setView={setView} />
-        <InfoPlanet planet={planet} view={view} />
-        <Stats planet={planet} /> <Outlet />
+        <div className="button-and-text">
+          <Buttons setView={setView} />
+          <InfoPlanet planet={planet} view={view} />
+        </div>
+        <Stats planet={planet} />
       </div>
     </>
   );

@@ -14,9 +14,15 @@ export const InfoPlanet = ({ planet, view }) => {
   }, [view, planet]);
 
   return (
-    <div>
+    <div className="planet-name-text-and-source">
       <h1 className="planet-name">{planet.name}</h1>
       <div className="planet-text">{text}</div>
+      <p>
+        Source:{" "}
+        <a className="source" href="https:www.wikipedia.com">
+          Wikipedia{" "}
+        </a>
+      </p>
     </div>
   );
 };
