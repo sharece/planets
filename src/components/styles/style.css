@@ -127,7 +127,7 @@ body {
   }
   .surface-img {
     width: 25%;
-    position: absolute;
+    position: relative;
     top: 192px;
     left: 170px;
     background: none;
@@ -157,17 +157,13 @@ body {
     display: flex;
   }
   .mobile-button-container {
-    width: 100%;
-    border-top: 1px solid #ffffff33;
     border-bottom: 1px solid #ffffff33;
     font-size: 14px;
     font-weight: bold;
-    /* padding: 10px, 60px, 10px, 60px; */
-    /* /* */
     padding-bottom: 10px;
-    padding-top: 10px;
+    padding-top: 28px;
     text-transform: uppercase;
-    padding-left: 42px;
+    padding-left: 39px;
   }
   .emb:hover {
     text-decoration: underline var(--Uranus);
@@ -175,7 +171,7 @@ body {
   }
 
   .emb {
-    padding-right: 10px;
+    padding-right: 39px;
   }
   footer {
     /* padding: 0px 25px; */
@@ -263,7 +259,7 @@ body {
     background-color: #497efa;
   }
   .ham-link::after {
-    content: url("./icon-chevron.svg");
+    content: url("./chevron.svg");
     position: absolute;
     right: 0px;
     top: 20px;
@@ -275,19 +271,19 @@ body {
   .ham-head.active {
     opacity: 0.2;
   }
+  .ham-icon {
+    position: absolute;
+    left: 337px;
+    width: 10%;
+    left: 325px;
+    bottom: 34px;
+    color: #ffffff33;
+  }
   .main {
     padding: 0 25px;
     margin-top: 150px;
     flex-direction: column;
     align-items: center;
-    z-index: -1;
-  }
-  .main.active {
-    opacity: 0;
-  }
-  .main-image {
-    margin: 0 auto;
-    text-align: center;
     z-index: -1;
   }
 }
@@ -303,6 +299,13 @@ body {
     flex-direction: column;
     align-items: center;
   }
+  .surface-img {
+    width: 14%;
+    position: absolute;
+    top: 235px;
+    left: 335px;
+    background: none;
+  }
   .img-container {
     margin-top: 150px;
     justify-content: center;
@@ -310,6 +313,7 @@ body {
     padding-bottom: 111px;
   }
   .img {
+    position: absolute;
     width: 20%;
   }
   .planet-page-container {
@@ -389,6 +393,9 @@ body {
   .mobile-buttons {
     display: none;
   }
+  .ham-icon {
+    display: none;
+  }
   .button-container {
     position: absolute;
   }
@@ -411,12 +418,13 @@ body {
     color: white;
     text-transform: uppercase;
     font-family: "League Spartan";
+    padding: 10px;
   }
 
   .nav-planets > a {
-    padding: 25px;
+    text-transform: uppercase;
     color: #ffffffcf;
-    text-decoration: none;
+    padding: 11px;
   }
   .nav-container {
     padding-bottom: 20px;
@@ -426,77 +434,157 @@ body {
   }
 }
 
-/* .img? */
-/* .planet__spec {
-    width: 60%;
-    margin: 0 auto;
-  } */
-
-/* surface img? */
-/* .image__tool {
-    width: 25%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, 50%);
-  } */
-/* planet name and info */
-/* .details__text {
-    margin-top: 100px;
-    text-align: center;
-  } */
-
-/* .text__source {
-    text-align: center;
-    justify-content: center;
+@media screen and (min-width: 1200px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #ffffff33;
   }
-} */
+  .the-planets {
+    padding-right: 1050px;
+    padding-top: 20px;
+  }
+  .nav-planets {
+    left: 134px;
+    padding-left: 356px;
+    display: block;
+    font-size: 24px;
+  }
+  .the-planets-and-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .surface-img {
+    width: 15%;
+    position: absolute;
+    top: 287px;
+    left: 512px;
+    background: none;
+  }
+  .img-container {
+    padding: 40px;
+    padding-left: 225px;
+  }
+  .img {
+    width: 20%;
+  }
+  .planet-page-container {
+    flex-direction: column;
+  }
+  .planet-name-text-and-source {
+    width: 100%;
+    /* padding-left: 70px; */
+    padding-right: 270px;
+  }
 
-/* og style */
-/* .nav-planets > a {
+  .button-and-text {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px;
+    flex-direction: column-reverse;
+    padding-left: 641px;
+  }
+
+  .ham-links {
     display: none;
-    padding: 8px;
+  }
+  .ham-icon {
+    display: none;
+  }
+  .button-container {
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+  }
+
+  .nav-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .the-planets {
+    font-family: "Antonio";
+    align-items: center;
+    font-weight: 500;
+    font-size: 28px;
+    text-transform: uppercase;
+    line-height: 100%;
+    color: #ffffff80;
+  }
+  .planet-page-container {
+    display: flex;
+  }
+  .nav-planets {
+    display: initial;
+  }
+  .nav-planets > a:hover {
+    text-decoration: underline aqua;
+    color: white;
+  }
+  .nav-planets > a {
+    padding: 25px;
     color: #ffffffcf;
     text-decoration: none;
   }
-  .stat-data {
-    font-size: 20px;
-    font-family: "Antonio", sans-serif;
+  .nav-container {
+    padding-bottom: 20px;
   }
-  .stat-title {
-    font-size: 10px;
-    margin: 0px;
-    color: #ffffff75;
+
+  .mobile-buttons {
+    display: none;
+  }
+  .button-container {
+    /* position: absolute; */
+  }
+  .buttons {
+    display: initial;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 1px lightslategray;
+  }
+  button:hover {
+    background-color: #35aae0;
+  }
+  button > span {
+    color: lightslategray;
+    background: none;
+  }
+  button {
+    background: none;
+    color: white;
+    text-transform: uppercase;
+    font-family: "League Spartan";
+    padding: 10px;
+  }
+
+  footer {
+    margin-bottom: 5px;
   }
   .stat-box {
-    position: relative;
-    justify-content: left;
-    height: 30px;
-    width: 135%;
-    padding: 10px;
-    margin: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  .stat-container {
+    flex-direction: row;
+    width: 100%;
+    margin-top: 20px;
+  }
+  .stat-box {
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    padding: 15px 25px;
+  }
+  .stat-title {
+    font-size: 8px;
+    line-height: 16px;
+    padding-bottom: 3px;
   }
   .stat-data {
     font-size: 20px;
-    margin: auto;
+    margin-left: auto;
   }
-   */
-
-/* @media screen and (min-width: 1200px) */
-/* @media screen and (max-width: 700px) */
-
-/* :root {
-  --Mercury: #419ebb;
-  --Jupiter: #6d2ed5;
-  --Mars: #d14c32;
-  --Neptune: #2d68f0;
-  --Saturn: #cd5120;
-  --Uranus: #1ec1a2;
-  --Venus: #eda249;
-  --BodyBg: #070724;
-  --Inactive-Button-bg: #ffffff33;
-  /* , ham-bg */
-/* --Inactive-Button-bg: #d8d8d833; */
-/* hover */
-
-/* */
+}

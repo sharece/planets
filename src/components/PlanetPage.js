@@ -35,10 +35,12 @@ export const PlanetPage = () => {
       <div className="planet-page-container">
         <PlanetNav />
         <MobileButtons setView={setView} />
-        <Images view={view} planet={planet} />
-        <div className="button-and-text">
-          <Buttons setView={setView} />
-          <InfoPlanet planet={planet} view={view} />
+        <div className="img-btn-info">
+          <Images view={view} planet={planet} />
+          <div className="button-and-text">
+            <Buttons setView={setView} />
+            <InfoPlanet planet={planet} view={view} />
+          </div>
         </div>
         <Stats planet={planet} />
       </div>
