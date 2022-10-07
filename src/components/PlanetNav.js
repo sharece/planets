@@ -2,18 +2,22 @@ import { Link } from "react-router-dom";
 import React from "react";
 import { useState } from "react";
 import { planetInfo } from "../planetInfo";
+// import { PlanetPage } from "./PlanetPage";
 import "./styles/style.css";
 
-export const PlanetNav = ({ setView }) => {
+export const PlanetNav = () => {
   const [open, setOpen] = useState(false);
+  const [planet1, setPlanet1] = useState(null);
+  // const [showMenu, setShowMenu] = useState(false);
 
-  function handleLinkClick(planet) {
-    setView(planet);
+  function handleLinkClick(planet1) {
+    setPlanet1(planet1);
     // console.log(planet.name);
     if (open) {
       setOpen(false);
     }
   }
+
   function handleHamMenuClick() {
     if (!open) {
       setOpen(true);
@@ -39,15 +43,32 @@ export const PlanetNav = ({ setView }) => {
         </li>
       </div>
       <ul className={open ? "ham-links active" : "ham-links"}>
-        {planetInfo.map((disp) => (
-          <li
-            className="ham-link"
-            onClick={() => handleLinkClick(disp)}
-            key={disp.name}
-          >
-            {disp.name}
-          </li>
-        ))}
+        <ul>
+          <Link to="/mercury" className="ham-link">
+            Mercury{" "}
+          </Link>
+          <Link to="/venus" className="ham-link">
+            Venus
+          </Link>
+          <Link to="/earth" className="ham-link">
+            Earth
+          </Link>
+          <Link to="/mars" className="ham-link">
+            Mars
+          </Link>
+          <Link to="/jupiter" className="ham-link">
+            Jupiter
+          </Link>
+          <Link to="/saturn" className="ham-link">
+            Saturn
+          </Link>
+          <Link to="/uranus" className="ham-link">
+            Uranus
+          </Link>
+          <Link to="/neptune" className="ham-link">
+            Neptune
+          </Link>
+        </ul>
       </ul>
       <div
         className={open ? "ham-head active" : "ham-head"}
