@@ -101,7 +101,7 @@ body {
   header {
     height: 68px;
     padding: 0 25px;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -110,8 +110,7 @@ body {
   .the-planets {
     color: #ffffff80;
     margin-bottom: 7px;
-    /* position: absolute; */
-    /* margin-bottom: 835px; */
+    padding-top: 5px;
   }
   .nav-planets {
     display: none;
@@ -144,8 +143,6 @@ body {
   }
   .button-container {
     width: 100%;
-    /* top: 68px; */
-    /* justify-content: space-evenly; */
   }
   .buttons {
     display: none;
@@ -425,11 +422,11 @@ body {
     border-bottom: 1px solid #ffffff33;
   }
   .the-planets {
-    padding-right: 1050px;
+    padding-left: 10px;
     padding-top: 20px;
   }
   .nav-planets {
-    padding-left: 15rem;
+    padding-left: 9rem;
     display: block;
     font-size: 24px;
   }

@@ -10,11 +10,6 @@ export const Buttons = ({ setView }) => {
 
   return (
     <div className="button-container">
-      {/* <div className="mobile-buttons">
-        <a onClick={() => setView("overview")}>Overview</a>
-        <a onClick={() => setView("structure")}>Internal Structure</a>
-        <a onClick={() => setView("geology")}>Surface Geology</a>
-      </div> */}
       <div className="buttons">
         <button onClick={() => setView("overview")}>
           <span>01</span>Overview

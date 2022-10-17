@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { planetInfo } from "../planetInfo";
-import { setView } from "./PlanetPage";
+// import { setView } from "./PlanetPage";
 
 export const MobileButtons = ({ setView }) => {
   const [status1, setStatus1] = useState("");
@@ -12,15 +12,15 @@ export const MobileButtons = ({ setView }) => {
   return (
     <div className="mobile-button-container">
       <div className="mobile-buttons">
-        <a className="emb" onClick={() => setView("overview")}>
+        <p className="emb" onClick={() => setView("overview")}>
           Overview
-        </a>
-        <a className="emb" onClick={() => setView("structure")}>
+        </p>
+        <p className="emb" onClick={() => setView("structure")}>
           Structure
-        </a>
-        <a className="emb" onClick={() => setView("geology")}>
+        </p>
+        <p className="emb" onClick={() => setView("geology")}>
           Surface
-        </a>
+        </p>
       </div>
     </div>
   );

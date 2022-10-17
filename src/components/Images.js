@@ -1,4 +1,4 @@
-import { PlanetPage } from "./PlanetPage";
+// import { PlanetPage } from "./PlanetPage";
 
 export const Images = ({ planet, view }) => {
   if (view === "overview") {
